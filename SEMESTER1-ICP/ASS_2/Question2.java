@@ -1,0 +1,20 @@
+import java.util.*;
+public class Question2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		double km, meters, inches, feet, centimeter;
+		Scanner sc = new Scanner(System.in); 
+		System.out.print("Enter a distance in km: ");
+		km=sc.nextDouble();
+		meters=km*1000;
+		feet=3280.8399*km;
+		inches=39370.0787*km;
+		centimeter=100000*km;
+		System.out.println(km+" kilometers is "+meters+" meters");
+		System.out.println(km+" kilometers is "+feet+" feet");
+		System.out.println(km+" kilometers is "+inches+" inches");
+		System.out.println(km+" kilometers is "+centimeter+" centimeter");
+	}
+
+}
