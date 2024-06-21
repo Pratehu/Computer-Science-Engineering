@@ -1,0 +1,55 @@
+
+
+import java.util.Scanner;
+public class SetCQ1 {
+
+		    public static boolean isPrime(int num) {
+		        if (num <= 1) {
+		            return false;
+		        }
+		        if (num <= 3) {
+		            return true;
+		        }
+		        if (num % 2 == 0 || num % 3 == 0) {
+		            return false;
+		        }
+		        for (int i = 5; i * i <= num; i += 6) {
+		            if (num % i == 0 || num % (i + 2) == 0) {
+		                return false;
+		            }
+		        }
+		        return true;
+		    }
+
+		    public static void main(String[] args) {
+		        Scanner scanner = new Scanner(System.in);
+
+		        System.out.print("Enter the starting interval value (a): ");
+		        int a = scanner.nextInt();
+
+		        System.out.print("Enter the ending interval value (b): ");
+		        int b = scanner.nextInt();
+
+		        int sum = 0;
+		        int count = 0;
+
+		        for (int num = a; num <= b; num++) {
+		            if (!isPrime(num)) {
+		                sum += num;
+		                count++;
+		            }
+		        }
+
+		        double average = count > 0 ? (double) sum / count : 0.0;
+
+		        System.out.println("Sum of non-prime numbers: " + sum);
+		        System.out.println("Average of non-prime numbers: " + average);
+
+		        scanner.close();
+		    }
+		}
+
+   // Enter the starting interval value (a): 7
+  //  Enter the ending interval value (b): 30
+ //   Sum of non-prime numbers: 325
+//    Average of non-prime numbers: 19.11764705882353
