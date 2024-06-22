@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Page with Images and Table</title>
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+  <!-- Custom CSS -->
+  <style>
+    /* Custom styles here */
+    body {
+      padding: 20px;
+    }
+    .myimage {
+            height: 100px;
+            width: 100px;
+        }
+        
+     #h1{
+        float: left;
+     }
+    img.rounded-image {
+      border-radius: 50%;
+      max-width: 100%;
+      height: auto;
+    }
+
+    img.thumbnail-image {
+      max-width: 100%;
+      height: auto;
+    }
+
+    table {
+      width: 100%;
+      margin-top: 20px;
+    }
+
+    table, th, td {
+      border: 1px solid #dee2e6;
+      border-collapse: collapse;
+      text-align: center;
+    }
+
+    th, td {
+      padding: 10px;
+    }
+
+    button {
+      margin-top: 20px;
+    }
+
+    /* Glow effect on hover */
+    table:hover {
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      transition: box-shadow 0.3s ease-in-out;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Images -->
+  <div class="row">
+    <div class="col-md-6">
+        <img class="rounded-circle myimage " src="1-5.jpg">
+
+    </div>
+    <div class="col-md-6" id="h1">
+        <img class="img-thumbnail myimage" src="taj.jpg">
+    </div>
+  </div>
+
+  <!-- Table -->
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Header 1</th>
+        <th>Header 2</th>
+        <th>Header 3</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Data 1</td>
+        <td>Data 2</td>
+        <td>Data 3</td>
+      </tr>
+      <!-- Add more rows if needed -->
+    </tbody>
+  </table>
+
+  <!-- Button to hide the table -->
+  <button class="btn btn-primary" id="hideTableBtn">Hide Table</button>
+
+  <!-- Bootstrap JS and Popper.js (required for Bootstrap) -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <!-- jQuery for hiding the table on button click -->
+  <script>
+    $(document).ready(function() {
+      $("#hideTableBtn").click(function() {
+        $("table").toggle();
+      });
+    });
+  </script>
+
+</body>
+</html>

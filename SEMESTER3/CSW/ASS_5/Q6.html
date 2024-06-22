@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+</head>
+<body>
+<div class="alert alert-primary">This is primary alert</div>
+<div class="alert alert-secondary alert-dismissible" >This is secondary alert <br>
+    This is a <a href="https://www.soa.ac.in" class="alert-link">SOA</a><br>
+    <button class="btn-close" data-bs-dismiss="alert"></button>
+</div>
+<div class="alert alert-success alert-dismissible fade">This is success alert</div>
+<div class="alert alert-warning alert-dismissible show">This is danger alert</div>
+<div class="alert alert-info">This is warning alert</div>
+<div class="alert alert-danger">This is info alert</div>
+<div class="alert alert-light">This is light alert</div>
+<div class="alert alert-dark">This is dark alert</div>
+
+
+<button type="button" class="btn btn-primary">This is primary button</button>
+<button type="button" class="btn btn-secondary " >This is secondary abutton<br>
+    <!-- This is a <a href="https://www.soa.ac.in" class="alert-link">SOA</a><br> -->
+    <!-- <button class="btn-close" data-bs-dismiss="alert"></button> -->
+</button>
+<button type="button" class="btn btn-success">This is success button</button>
+<button type="button" class="btn btn-warning">This is danger button</button>
+<button type="button" class="btn btn-info">This is warning button</button>
+<button type="button" class="btn btn-danger">This is info button</button>
+<button type="button" class="btn btn-light">This is light button</button>
+<button type="button" class="btn btn-dark">This is dark button</button>
+
+<button type="button" class="btn btn-outline-primary">This is primary </button>
+<button type="button" class="btn btn-outline-secondary" >This is secondary 
+</button>
+<button type="button" class="btn btn-outline-success">This is success </button>
+<button type="button" class="btn btn-outline-danger">This is danger </button>
+<button type="button" class="btn btn-outline-warning">This is warning </button>
+<button type="button" class="btn btn-outline-info">This is info </button>
+<button type="button" class="btn btn-outline-light">This is light </button>
+<button type="button" class="btn btn-outline-dark">This is dark </button>
+
+<button type="button" class="btn btn-success btn-sm">This is success button</button>
+<button type="button" class="btn btn-warning btn-md">This is danger button</button>
+<button type="button" class="btn btn-info btn-lg">This is warning button</button>
+<div id="p1" class="btn-group">
+<button type="button"  class="btn btn-primary">This is primary button</button>
+<button type="button"  class="btn btn-secondary" >This is secondary button
+</button>
+<button type="button"  class="btn btn-success">This is success button</button>
+</div>
+<button type="button" id="h1">Outline</button>
+<button type="button" id="h2">Colors</button>
+
+<br>
+<br>
+<div id="b1" class="btn-group-vertical">
+    <button type="button" id="small" class="btn btn-primary">This is primary button</button>
+    <button type="button" id="medium" class="btn btn-secondary" >This is secondary button
+    </button>
+    <button type="button" id="large" class="btn btn-success">This is success button</button>
+</div>
+<br> 
+</br>
+    
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function() {
+        // $("#h1").click(function() {
+        //     $("#p1").addClass("btn btn-outline-secondary")
+        //     // $("#p1").addClass("btn btn-outline-secondary")
+        //     // $("#p1").addClass("btn btn-outline-sucess")
+        //     $("#h2").click(function() {
+        //         $("#p1").removeClass("btn btn-primary")
+        //     });
+            $("#small").click(function() {
+                $("#b1").addClass("btn-group-lg");
+                alert("this is done");
+            });
+            $("#medium").click(function() {
+                $("#b1").addClass("btn-group-md")
+            });
+            $("#large").click(function() {
+                $("#b1").addClass("btn-group-sm")
+            });
+    });
+
+    </script>
+
+
+</body>
+</html>
