@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="code.jquery.com_jquery-3.7.1.min.js"></script>
+    <style>
+         #a1
+        {
+            color: yellowgreen;
+            background-color: red;
+        }
+    </style>
+    <script>
+        $(document).ready(function () {
+             $("#s1").click(function(){
+                $("#s1").append("lol")
+             });
+             $("#s2").click(function(){
+                $("#s2").prepend("Hmmm")
+               
+             });
+             $("#s1").dblclick(function(){
+                $("#s1").after("hi my self pragyan")
+             });
+             $("#s2").dblclick(function()
+             {
+              $("#s2").before("From ITER")  
+             });
+             var n=1;
+        $("#h4").click(function() {
+            if($("#a1").val()>17) {
+            $("#a1").after("you are eligible to Vote");
+        $("#a1").addClass("#a1")}
+             else
+             {
+                $("#a1").after("you are not eligible to Vote");
+                // alert("you are not eligible");
+             }
+        });
+        });
+    </script>
+</head>
+<body>
+    <h1>heading-1</h1>
+    <p id="s1">Lorem, ipsum dolor sit amet consectetur adipisicing elit.<b>WOW</b> Optio eveniet rem, quibusdam tenetur exercitationem sunt!</p>
+    <p id="s2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, laudantium.</p>
+    <textarea id="a1" rows="5" cols="5"></textarea>
+    <button id="h4">Enter</button>
+</body>
+</html>

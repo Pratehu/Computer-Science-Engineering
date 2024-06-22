@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Table Manipulation</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      // Add Rows
+      let rowNumber = 1;
+      $("#addRowButton").click(function() {
+        let newRow = $("<tr>");
+        newRow.html("<td>Row " + rowNumber + "</td><td>Content</td>");
+        $("#myTable").append(newRow);
+        rowNumber++;
+      });
+
+      // Change Text Color
+      $("#changeColorButton").click(function() {
+        $("#myTable td").css("color", "red");
+      });
+
+      // Remove Elements by ID
+      $("#removeButton").click(function() {
+        let idToRemove = $("#removeInput").val();
+        $("#" + idToRemove).remove();
+      });
+    });
+  </script>
+</head>
+<body>
+  <h2>Table Manipulation</h2>
+
+  <table id="myTable" border="1">
+    <tr>
+      <th>ID</th>
+      <th>Content</th>
+    </tr>
+  </table>
+
+  <button id="addRowButton">Add Row</button>
+  <button id="changeColorButton">Change Text Color</button>
+
+  <hr>
+
+  <input type="text" id="removeInput" placeholder="Enter ID to remove">
+  <button id="removeButton">Remove Elements by ID</button>
+</body>
+</html>

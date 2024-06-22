@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popup</title>
+    <style>
+        body {
+  font-family: Arial, sans-serif;
+  background: url("ITER.png") no-repeat;
+  background-size: cover;
+  height: 100px;
+}
+
+h1 {
+  text-align: center;
+  font-family: Tahoma, Arial, sans-serif;
+  color: #011746;
+  margin: 80px 0;
+}
+
+
+.box {
+  width: 40%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.button {
+  font-size: 1em;
+  padding: 10px;
+  color: #0c0c0c;
+  border: 2px solid burlywood;
+  border-radius: 20px/50px;
+  /* text-decoration: none; */
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+.button:hover {
+  background: rgb(210, 156, 89);
+}
+
+.ol {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+.ol:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+  margin: 70px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 30%;
+  position: relative;
+  transition: all 5s ease-in-out;
+}
+
+.popup h2 {
+  margin-top: 0;
+  color: #333;
+  font-family: Tahoma, Arial, sans-serif;
+}
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  /* text-decoration: none; */
+  color: #333;
+}
+.popup .close:hover {
+  color: #ac0202;
+}
+.popup .content {
+  max-height: 30%;
+  overflow: auto;
+}
+
+
+    </style>
+</head>
+<body>
+    <h1>Siksha 'O' Anushandhan</h1>
+   
+    
+<div class="box">
+	<a class="button" href="#popup1">Let me Pop up</a>
+</div>
+
+<div id="popup1" class="ol">
+	<div class="popup">
+		<h2>Popup Box</h2>
+		<a class="close" href="#">&times;</a>
+		<div class="content">
+			Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit neque pariatur sit ut tenetur! Sapiente optio delectus ex non necessitatibus.
+		</div>
+	</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!-- build once again -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <script src="code.jquery.com_jquery-3.7.1.min.js"></script>>
+<title>HTML page</title>
+<style>
+tr, td, table {
+border: 1px solid black;
+width: 200px;
+}
+</style>
+</head>
+<body>
+<table id="tb">
+<tr>
+<td>Hello world</td>
+</tr>
+</table>
+<button id="btn">Add</button>
+<button id="btn-2">Change color</button>
+<br>
+<input type="text" name="id-delete" id="id-delete">
+<button id="btn-3">Delete row</button>
+</body>
+<script>
+$(document).ready(function () {
+$("#btn").click(function () {
+$("#tb").append("<tr>" + "<td> Another nice row </td>" + "</tr>");
+});
+$("#btn-2").click(function () {
+$("#tb").css("color", "red");
+});
+});
+</script>
+</html

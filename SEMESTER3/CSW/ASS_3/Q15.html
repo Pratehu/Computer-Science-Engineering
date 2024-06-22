@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>jQuery Methods Example</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    body{
+        background-color: cadetblue;
+    }
+    #content {
+      background-color: #b44242;
+      padding: 20px;
+      display: none;
+      width: 200px;
+      text-align: center;
+    }
+  </style>
+  <script>
+    $(document).ready(function() {
+      // Slide down
+      $("#SDB").click(function() {
+        $("#content").slideDown();
+      });
+
+      // Animate
+      $("#AB").click(function() {
+        $("#content").animate({
+          width: 'toggle',
+          opacity: 'toggle'
+        }, 1000);
+      });
+
+      // Fade In
+      $("#fadeIn").click(function() {
+        $("#content").fadeIn();
+      });
+
+      // Hide
+      $("#hide").click(function() {
+        $("#content").hide();
+      });
+
+      // Show
+      $("#show").click(function() {
+        $("#content").show();
+      });
+
+      // Mouse Enter
+      $("#mouseEnter").mouseenter(function() {
+        $(this).css("background-color", "blue");
+      });
+
+      // Double Click
+      $("#doubleClick").dblclick(function() {
+        $(this).html("Double Clicked");
+      });
+
+      // Mouse Leave
+      $("#mouseLeave").mouseleave(function() {
+        $(this).css("background-color", "transparent");
+      });
+
+      // Attribute (attr)
+      $("#attr").click(function() {
+        $(this).attr("disabled", true);
+      });
+
+      // HTML content
+      $("#html").click(function() {
+        $("#content").html("<strong>Updated content</strong>");
+      });
+    });
+  </script>
+</head>
+<body>
+  <button id="SDB">Slide Down</button>
+  <button id="AB">Animate</button>
+  <button id="fadeIn">Fade In</button>
+  <button id="hide">Hide</button>
+  <button id="show">Show</button>
+  <button id="mouseEnter">Mouse Enter</button>
+  <button id="doubleClick">Double Click</button>
+  <button id="mouseLeave">Mouse Leave</button>
+  <button id="attr">Attribute</button>
+  <button id="html">HTML Content</button>
+  
+  <div id="content">This is a hidden div</div>
+</body>
+</html>

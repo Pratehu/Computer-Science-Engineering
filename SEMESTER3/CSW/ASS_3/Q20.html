@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Multi-Page Website</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Welcome to Our Website</h1>
+    <p>Explore our pages and get to know our team!</p>
+  </main>
+
+  <footer>
+    &copy; 2023 Your Website
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      // Team member content toggling
+      $(".toggle-button").click(function() {
+        $(this).next(".member-content").toggle();
+      });
+
+      // Form validation
+      $("form").submit(function(event) {
+        var name = $("#name").val();
+        var email = $("#email").val();
+        var message = $("#message").val();
+
+        if (!name || !email || !message) {
+          event.preventDefault();
+          $(".error-message").text("This field is required");
+        } else if (!isValidEmail(email)) {
+          event.preventDefault();
+          $(".error-message").text("Please use a valid email address");
+        }
+      });
+
+      function isValidEmail(email) {
+        // Basic email validation using a regular expression
+        var emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+        return emailPattern.test(email);
+      }
+    });
+  </script>
+</body>
+</html>

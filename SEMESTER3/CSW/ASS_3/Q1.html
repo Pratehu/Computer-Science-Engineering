@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Animation</title>
+    <style>
+       body{
+        background-color: burlywood;
+       }
+        div{
+            text-align: center;
+        }
+       
+        #box1 {
+            background-image: url('p5.jpg');
+            left: 230px;;
+            width: 150px;
+            height: 230px;
+            background-color: rgb(255, 0, 140);
+            position: relative;
+            margin:35px;
+            border: 2px solid black;
+            border-radius: 10px;
+            
+        }
+        #box2 {
+            background-image: url('p3.jpg');
+            left:350px;
+            width: 250px;
+            height: 150px;
+            background-color: rgb(72, 195, 226);
+            color: aliceblue;
+            position: relative;
+            margin:35px;
+            border: 2px solid black;
+            border-radius: 7px;
+        }
+        #box3 {
+            background-image: url('p6.jpg');
+            left:450px;
+            width: 350px;
+            height: 230px;
+            background-color: rgb(64, 92, 185);
+            position: relative;
+            margin:35px;
+            border: 2px solid black;
+            border-radius: 5px;
+        }
+        #animate
+        {
+            width: 150px;
+           position:absolute;
+           left: 50%; 
+            background-color: cadetblue;
+        }
+        #animate1
+        {
+            width: 150px;
+           position:absolute;
+           left: 4%; 
+            background-color: rgb(209, 233, 165);
+        }
+
+        #animate2
+        {
+            width: 150px;
+           position:absolute;
+           left: 85%; 
+            background-color: rgb(235, 198, 245);
+        }
+    </style>
+    <script src="code.jquery.com_jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#animate").click(function()
+                {
+                $("#box1").animate( 
+                    {
+                    right: '200px',
+                    opacity: 0.5,
+                    height: '150px',
+                    width: '150px'
+                }, 1000, function(){ alert("completed")})
+                    
+                    $("#animate1").dblclick(function()
+                {
+                $("#box2").fadeToggle( 
+                    {
+                    right: '200px',
+                    opacity: 1,
+                    height: '150px',
+                    width: '150px'
+                }, 1000)
+                    
+                    $("#animate2").mouseenter(function()
+                {
+                $("#box3").slideToggle( 
+                    {
+                    right: '200px',
+                    opacity: 1,
+                    height: '150px',
+                    width: '250px'
+                }, 1000,);
+                    
+                });
+        });
+    });
+});
+    </script>
+</head>
+<body>
+    <button id="animate">Animate</button>
+    <div id="box1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id, voluptatum.
+    </div>
+    <button id="animate1">Fade</button>
+    <div id="box2">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis enim velit nisi ea earum quia accusantium unde repellendus deserunt accusamus!</div>
+    <button id="animate2">Animate</button>
+    <div id="box3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium sunt facere qui repudiandae. Hic, velit aut. Aperiam, praesentium.</div>
+
+    
+
+</body>
+</html>

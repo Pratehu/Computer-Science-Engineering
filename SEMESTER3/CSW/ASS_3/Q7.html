@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script src="jquery-3.6.1.js"></script>
+<title>Assignment 7</title>
+</head>
+<body>
+<form name="form1">
+<label for="u-name">Username:</label>
+<input type="text" name="u-name" id="u-name">
+<br>
+<label for="p-word">Password:</label>
+<input type="password" name="p-word" id="p-word">
+<br>
+<label for="mail-id">Email:</label>
+<input type="email" name="mail-id" id="mail-id">
+<br>
+<input type="submit" value="Submit" id="btn">
+</form>
+</body>
+<script>
+$(function () {
+// var usr = $("#u-name").val();
+// var pwd = $("#p-word").val();
+$("#btn").click(function () {
+var usr = $("#u-name").val();
+var pwd = $("#p-word").val();
+if(usr == "" || pwd == "") {
+alert("The username or password field is empty.");
+}
+});
+});
+</script>
+</html>

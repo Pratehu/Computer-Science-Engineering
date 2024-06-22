@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="code.jquery.com_jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+             $("#k1").click(function(){
+                alert($("#s1").text())
+             });
+             $("#k2").click(function(){
+                alert($("#s1").html())
+             });
+             $("#k3").click(function(){
+                alert($("#tt").val())
+             });
+             $("#k4").click(function()
+             {
+              alert($("#h1").attr("href"))  
+             });
+        });
+    </script>
+</head>
+<body>
+    <h1>heading-1</h1>
+    <p id="s1">Lorem, ipsum dolor sit amet consectetur adipisicing elit.<b>WOW</b> Optio eveniet rem, quibusdam tenetur exercitationem sunt!</p>
+    <input type="text" id="tt">
+    <a href="https//:www.google.com" target="_blank" id="h1"></a>
+    <button id="k1">SetText</button>
+    <button id="k2">SetHtml</button>
+    <button id="k3">SetVal</button>
+    <button id="k4">SetAttr</button>
+</body>
+</html>

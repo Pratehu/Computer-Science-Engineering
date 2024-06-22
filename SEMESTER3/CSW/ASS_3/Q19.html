@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Rock, Paper, Scissors Game</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+  <h1>Rock, Paper, Scissors</h1>
+
+  <div class="score">
+    <p>Player: <span id="playerScore">0</span></p>
+    <p>Computer: <span id="computerScore">0</span></p>
+  </div>
+
+  <div class="game">
+    <div class="choices">
+      <button class="btn" id="rock">Rock</button>
+      <button class="btn" id="paper">Paper</button>
+      <button class="btn" id="scissors">Scissors</button>
+    </div>
+    <div class="result">
+      <p id="resultText">Choose your move!</p>
+      <button id="reset" style="display: none;">Play Again</button>
+    </div>
+  </div>
+
+  <script>
+    const playerScoreElement = document.getElementById("playerScore");
+    const computerScoreElement = document.getElementById("computerScore");
+    const rockButton = document.getElementById("rock");
+    const paperButton = document.getElementById("paper");
+    const scissorsButton = document.getElementById("scissors");
+    const resultText = document.getElementById("resultText");
+    const resetButton = document.getElementById("reset");
+
+    let playerScore = 0;
+    let computerScore = 0;
+
+    rockButton.addEventListener("click", () => playRound("rock"));
+    paperButton.addEventListener("click", () => playRound("paper"));
+    scissorsButton.addEventListener("click", () => playRound("scissors"));
+
+    function playRound(playerSelection) {
+      const choices = ["rock", "paper", "scissors"];
+      const computerSelection = choices[Math.floor(Math.random() * 3)];
+
+      if (playerSelection === computerSelection) {
+        resultText.textContent = "It's a tie!";
+      } else if (
+        (playerSelection === "rock" && computerSelection === "scissors") ||
+        (playerSelection === "paper" && computerSelection === "rock") ||
+        (playerSelection === "scissors" && computerSelection === "paper")
+      ) {
+        resultText.textContent = `You win! ${playerSelection} beats ${computerSelection}`;
+        playerScore++;
+      } else {
+        resultText.textContent = `You lose! ${computerSelection} beats ${playerSelection}`;
+        computerScore++;
+      }
+
+      updateScores();
+      checkGameEnd();
+    }
+
+    function updateScores() {
+      playerScoreElement.textContent = playerScore;
+      computerScoreElement.textContent = computerScore;
+    }
+
+    function checkGameEnd() {
+      if (playerScore === 5 || computerScore === 5) {
+        resultText.textContent =
+          playerScore > computerScore ? "You win the game!" : "Computer wins the game!";
+        disableButtons();
+        resetButton.style.display = "block";
+        resetButton.addEventListener("click", resetGame);
+      }
+    }
+
+    function disableButtons() {
+      rockButton.disabled = true;
+      paperButton.disabled = true;
+      scissorsButton.disabled = true;
+    }
+
+    function resetGame() {
+      playerScore = 0;
+      computerScore = 0;
+      updateScores();
+      resultText.textContent = "Choose your move!";
+      resetButton.style.display = "none";
+      enableButtons();
+    }
+
+    function enableButtons() {
+      rockButton.disabled = false;
+      paperButton.disabled = false;
+      scissorsButton.disabled = false;
+    }
+  </script>
+</body>
+</html>
