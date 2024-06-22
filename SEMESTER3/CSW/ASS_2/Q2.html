@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html >
+<head>
+    <title>Div elements</title>
+    <style>
+        .table 
+        {
+            display: table;
+            width: 350px;
+            border-collapse: collapse;
+            margin: 50px auto;
+        }
+        .tr
+        {
+            display: table-row;
+        }
+        .tc
+        {
+            display: table-cell;
+            padding: 8px 12px;
+            border: 2px solid rgb(209, 88, 88);
+        }
+        .tr:nth-child(odd)
+        {
+            background-color: rgb(78, 165, 165);
+        }
+        .tc:first-child
+        {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="table">
+        <div class="tr">
+        <div class="tc">Name:</div>
+        <div class="tc">Pragyan Priyadarshini</div> </div>
+        <div class="tr">
+        <div class="tc">Address:</div>
+        <div class="tc">Kalinga nagar,Bhubaneswar</div> </div>
+        <div class="tr">
+        <div class="tc">Course:</div>
+        <div class="tc">Computer Science & Engineering</div></div>
+        <div class="tr">
+        <div class="tc">Institution:</div>
+        <div class="tc">Siksha 'O' Anusandhan</div></div>
+    </div>
+</body>
+</html>

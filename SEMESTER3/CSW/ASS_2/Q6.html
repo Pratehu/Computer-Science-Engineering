@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>The Sticky Menu</title>
+  <style>
+    body
+    {
+      background-image: url('p7.jpg');
+    
+      height: 1000px;
+    }
+    .menu-bar {
+      position:sticky; 
+      top: 0; 
+      width: 200px; 
+      background-color: #0e7777; 
+      color: #fff;
+      padding: 20px; 
+    }
+    .menu-item {
+      display: block;
+      text-decoration: none;
+      color: #fff;
+      padding: 10px;
+    }
+    .menu-item.active {
+      background-color: #555; 
+    }
+    p{
+      color: aliceblue;
+    }
+  </style>
+</head>
+<body>
+  <div class="menu-bar" style="left: 0;">
+    <a href="#" class="menu-item">Menu Item 1</a>
+    <a href="#" class="menu-item">Menu Item 2</a>
+    <a href="#" class="menu-item active">Menu Item 3</a>
+    <a href="#" class="menu-item">Menu Item 4</a>
+  </div>
+  <div style="margin-left: 250px; margin-right: 220px;">
+    <p id="p">This is the main content of your page.</p>
+  </div>
+</body>
+</html>

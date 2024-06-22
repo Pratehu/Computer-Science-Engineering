@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('p6.jpg');
+            background-repeat: repeat;
+            height: 4000px;
+            background-color: #d19e9e;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0px 0px 10px rgba(22, 22, 22, 0.1);
+        }
+
+        .logo {
+            text-align: center;
+            
+        }
+
+        .logo img {
+            width: 100px;
+            height: 100px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: bold;
+        }
+
+        .form-group input[type="text"],
+        .form-group input[type="password"],
+        .form-group input[type="email"],
+        .form-group select {
+            width: 90%;
+            padding: 10px;
+            border: 2px solid #3a8686;
+            border-radius: 4px;
+        }
+
+        .form-group input[type="radio"] {
+            margin-right: 5px;
+        }
+
+        .password-requirements {
+            font-size: 14px;
+            margin-top: 5px;
+            color: tomato;
+        }
+
+        .submit-button {
+            display: block;
+            width: 100%;
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .submit-button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="S.jpg" alt="SOA Logo">
+            <h1>Registration</h1>
+        </div>
+        <form>
+            <div class="form-group">
+                <label>UserName:</label>
+                <input type="text" id="username" name="username" placeholder="username" required>
+              </div>
+              <div class="form-group">
+                  <label>Email:</label>
+                  <input type="email" id="email" name="email" placeholder="email" required>
+              </div>
+              <div class="form-group">
+                <label>Mobile:</label>
+                <input type="mobile" id="mobile" name="mobile" placeholder="phone number " required>
+              </div>
+              <div>
+                  <b><label>Gender:</label></b>
+                  <input type="radio" id="male" name="gender" value="male" >
+                  Male
+                  <input type="radio" id="female" name="gender" value="female">
+                  Female
+              </div> <br>
+              <div class="form-group">
+                  <label>City:</label>
+                  <select id="city" name="city">
+                      <option value disabled selected>Select City</option>
+                      <option value="Bhubaneswar">Bhubaneswar</option>
+                      <option value="Kolkata">kolkata</option>
+                      <option value="Bengaluru">Bengaluru</option>
+                  </select>
+              </div>
+            <div class="form-group">
+                <label>Password:</label>
+                <input type="password" id="password" name="password" placeholder="password" required>
+                <div class="password-requirements">Password must contain at least 1 uppercase letter, 1 lowercase letter, and 1 number.</div>
+            </div>
+            <button type="submit" class="submit-button">Register</button>
+        </form>
+    </div>
+</body>
+</html>
