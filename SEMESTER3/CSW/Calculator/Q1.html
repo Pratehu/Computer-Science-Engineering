@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f4f4f4;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    #calculator {
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+    }
+
+    #calculator input {
+      width: 100%;
+      height: 60px;
+      font-size: 24px;
+      text-align: left;
+      padding: 10px 10px;
+      border: none;
+      outline: none;
+    }
+
+    #calculator button {
+      width: 25%;
+      height: 60px;
+      font-size: 18px;
+      border: none;
+      outline: none;
+      cursor: pointer;
+    }
+
+    #calculator button.operator {
+      background-color: #ff8c00;
+      color: #fff;
+    }
+
+    #calculator button.double {
+      width: 50%;
+    }
+
+    #calculator button.clear {
+      background-color: #dc3545;
+      color: #fff;
+    }
+
+    #calculator button.equal {
+      background-color: #28a745;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+
+<div id="calculator">
+  <input type="text" id="display" disabled>
+  <button>7</button>
+  <button>8</button>
+  <button>9</button>
+  <button class="operator">/</button>
+  <button>4</button>
+  <button>5</button>
+  <button>6</button>
+  <button class="operator">*</button>
+  <button>1</button>
+  <button>2</button>
+  <button>3</button>
+  <button class="operator">-</button>
+  <button class="double">0</button>
+  <button>.</button>
+  <button class="operator">+</button>
+  <button class="double equal">=</button>
+  <button class="clear">C</button>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script>
+  $(document).ready(function() {
+    let display = $('#display');
+
+    $('button').on('click', function() {
+      let buttonText = $(this).text();
+
+      if (buttonText === 'C') {
+        display.val('');
+      } else if (buttonText === '=') {
+        try {
+          display.val(eval(display.val()));
+        } catch (error) {
+          display.val('Error');
+        }
+      } else {
+        display.val(display.val() + buttonText);
+      }
+    });
+  });
+</script>
+
+</body>
+</html>
